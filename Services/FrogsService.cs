@@ -33,4 +33,9 @@ public class FrogsService
     Frog frog = _repository.CreateFrog(frogData);
     return frog;
   }
+
+  internal void DeleteFrog(int frogId)
+  {
+    _repository.DeleteFrog(frogId);
+  }
 }
