@@ -39,6 +39,7 @@ public class Startup
 
     // Startup can now hand out a Frogs Service to any Object that depends on it (needs one injected into the constructor)
     services.AddScoped<FrogsService>();
+    services.AddScoped<FrogsRepository>();
   }
 
   private void ConfigureCors(IServiceCollection services)
