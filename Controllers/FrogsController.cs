@@ -33,5 +33,19 @@ public class FrogsController : ControllerBase // extends BaseController
     }
   }
 
+  [HttpGet("{frogId}")] // '/:frogId'
+  public ActionResult<Frog> GetFrogById(int frogId) // req.params.frogId
+  {
+    try
+    {
+      Frog frog = _frogsService.GetFrogById(frogId);
+      return Ok(frog);
+    }
+    catch (Exception exception)
+    {
+      return BadRequest(exception.Message); // 400
+    }
+  }
+
 }
 

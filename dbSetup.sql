@@ -35,7 +35,6 @@ DROP TABLE frogs;
 
 INSERT INTO
   frogs (
-    id,
     name,
     color,
     is_poisonous,
@@ -44,15 +43,7 @@ INSERT INTO
     species
   )
 VALUES
-  (
-    5,
-    'meatloaf',
-    'brown',
-    FALSE,
-    TRUE,
-    19,
-    'bullfrog'
-  );
+  ('mick', 'brown', FALSE, TRUE, 19, 'bullfrog');
 
 UPDATE frogs
 SET
@@ -83,3 +74,10 @@ ORDER BY
 DELETE FROM frogs
 WHERE
   id = 5;
+
+SELECT
+  *
+FROM
+  frogs
+WHERE
+  id = 4;

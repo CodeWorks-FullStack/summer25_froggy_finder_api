@@ -1,3 +1,4 @@
+
 namespace froggy_finder_api.Services;
 
 public class FrogsService
@@ -13,5 +14,17 @@ public class FrogsService
   {
     List<Frog> frogs = _repository.GetFrogs();
     return frogs;
+  }
+
+  public Frog GetFrogById(int frogId)
+  {
+    Frog frog = _repository.GetFrogById(frogId);
+
+    if (frog == null)
+    {
+      throw new Exception($"Invalid id: {frogId}");
+    }
+
+    return frog;
   }
 }
