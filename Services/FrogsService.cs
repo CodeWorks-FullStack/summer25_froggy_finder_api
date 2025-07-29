@@ -1,8 +1,8 @@
-
 namespace froggy_finder_api.Services;
 
 public class FrogsService
 {
+  // NOTE you should only have one repository per service
   private readonly FrogsRepository _repository;
 
   public FrogsService(FrogsRepository repository)

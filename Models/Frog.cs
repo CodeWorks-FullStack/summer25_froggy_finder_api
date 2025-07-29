@@ -1,7 +1,8 @@
 using System.ComponentModel.DataAnnotations;
 
 namespace froggy_finder_api.Models;
-// backing model
+//  REVIEW backing model (supports rows of data coming out of sql table)
+// your model should support every column that is set up in your sql table that you want to send over the network to clients. Make sure your data types match up. All class members `should` be UpperPascalCased
 public class Frog
 {
   public int Id { get; set; }
