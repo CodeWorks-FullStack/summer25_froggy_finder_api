@@ -27,4 +27,10 @@ public class FrogsService
 
     return frog;
   }
+
+  public Frog CreateFrog(Frog frogData)
+  {
+    Frog frog = _repository.CreateFrog(frogData);
+    return frog;
+  }
 }

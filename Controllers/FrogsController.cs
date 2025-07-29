@@ -47,5 +47,19 @@ public class FrogsController : ControllerBase // extends BaseController
     }
   }
 
+  [HttpPost]
+  public ActionResult<Frog> CreateFrog([FromBody] Frog frogData)
+  {
+    try
+    {
+      Frog frog = _frogsService.CreateFrog(frogData);
+      return Ok(frog);
+    }
+    catch (Exception exception)
+    {
+      return BadRequest(exception.Message);
+    }
+  }
+
 }
 
