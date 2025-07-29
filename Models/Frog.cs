@@ -1,9 +1,11 @@
-namespace froggy_finder_api.Models;
+using System.ComponentModel.DataAnnotations;
 
+namespace froggy_finder_api.Models;
+// backing model
 public class Frog
 {
   public int Id { get; set; }
-  public string Name { get; set; }
+  [MinLength(3)] public string Name { get; set; }
   public string Color { get; set; }
   public string Species { get; set; }
   public bool IsPoisonous { get; set; }
